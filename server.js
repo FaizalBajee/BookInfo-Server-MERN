@@ -6,6 +6,7 @@ const responseController = require("./controllers/responseController")
 const loginRouter = require("./routers/loginRouter");
 const uploadBooksRouter = require('./routers/uploadBooksRouter')
 const summaryRouter = require("./routers/summaryRouter")
+const removeRouter = require("./routers/removeRouter")
 const app = express();
 
 // Middleware
@@ -30,6 +31,7 @@ main();
 app.use("/login", loginRouter)
 app.use("/uploadBooks", uploadBooksRouter)
 app.use("/summary", summaryRouter)
+app.use("/remove", removeRouter)
 
 app.listen(8115, () => {
     console.log("Server running on port 8115...");
